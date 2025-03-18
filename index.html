@@ -13,23 +13,27 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      line-height: 1.6;
     }
-    
+
     /* Animated header */
     h2 {
       text-align: center;
       color: #4CAF50;
-      font-size: 3em;
+      font-size: 3.5em;
+      margin-top: 50px;
       animation: fadeIn 2s ease-in-out;
     }
 
-    /* Fade-in animation */
+    /* Fade-in animation for header */
     @keyframes fadeIn {
       0% {
         opacity: 0;
+        transform: translateY(-50px);
       }
       100% {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -43,7 +47,7 @@
     @keyframes fadeInUp {
       0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
       }
       100% {
         opacity: 1;
@@ -54,6 +58,9 @@
     h3 {
       color: #4CAF50;
       margin-top: 20px;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     ul {
@@ -63,6 +70,7 @@
     /* Hover effect on list items */
     li {
       transition: all 0.3s ease-in-out;
+      font-size: 1.2em;
     }
 
     li:hover {
@@ -73,6 +81,50 @@
     /* Smooth scroll effect */
     html {
       scroll-behavior: smooth;
+    }
+
+    /* Add a subtle background animation */
+    body {
+      background: #1e1e1e;
+      background: linear-gradient(45deg, #1e1e1e, #333);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+    }
+
+    /* Gradient animation */
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Styling for sections and containers */
+    section {
+      margin: 40px;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #333;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #4CAF50;
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3e8e41;
     }
   </style>
 </head>

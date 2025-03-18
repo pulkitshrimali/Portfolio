@@ -5,34 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pulkit Shrimali - Resume</title>
   <style>
-    /* Basic styling to make it look nice */
+    /* Basic styling */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #333;
-      color: white;
+      font-family: 'Arial', sans-serif;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      overflow-x: hidden;
     }
-    h2, h3 {
+    
+    /* Animated header */
+    h2 {
+      text-align: center;
       color: #4CAF50;
+      font-size: 3em;
+      animation: fadeIn 2s ease-in-out;
     }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Professional summary text */
+    p, h3, ul {
+      opacity: 0;
+      animation: fadeInUp 1.5s forwards;
+    }
+
+    /* Fade-in with slight upward movement */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h3 {
+      color: #4CAF50;
+      margin-top: 20px;
+    }
+
     ul {
-      list-style-type: none;
-      padding-left: 0;
+      padding-left: 20px;
     }
+
+    /* Hover effect on list items */
     li {
-      margin: 10px 0;
+      transition: all 0.3s ease-in-out;
     }
-    a {
+
+    li:hover {
+      transform: scale(1.05);
       color: #4CAF50;
-      text-decoration: none;
+    }
+
+    /* Smooth scroll effect */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
+
   <section id="resume">
     <h2>PULKIT SHRIMALI</h2>
-    <p>📍 Parramatta, NSW 2150 | 📞 0401 570 796 | 📧 pulkitshrimali05@gmail.com</p>
+    <p>📍 Pyrmont, NSW 2009 | 📞 0401 570 796 | 📧 pulkitshrimali05@gmail.com</p>
 
     <h3>Professional Summary</h3>
     <p>Highly motivated, well-mannered, and detail-oriented professional with a strong ability to manage multiple projects efficiently. A dedicated team player with excellent organizational skills, strong ethical values, and a positive attitude. Known for good behavior, professionalism, and a proactive approach to problem-solving. Capable of handling responsibilities with precision and reliability. Seeking a full-time role that allows me to leverage my technical expertise, problem-solving skills, and leadership abilities to drive success.</p>
@@ -73,7 +121,7 @@
       </li>
       <li><strong>Game Development Project:</strong>
         <ul>
-          <li>Developed a 2D game using Python and Java</li>
+          <li>Developed a 2D and 3D game using Python and Java</li>
           <li>Implemented core game mechanics, physics, and player interactions</li>
           <li>Optimized performance for smooth gameplay and minimal lag</li>
         </ul>
@@ -94,5 +142,6 @@
       <li>Hindi – Native/Bilingual Proficiency</li>
     </ul>
   </section>
+
 </body>
 </html>

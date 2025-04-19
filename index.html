@@ -1,198 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pulkit Shrimali - Resume</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(45deg, #1e1e1e, #333);
-      background-size: 400% 400%;
-      animation: gradient 10s ease infinite;
-      color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
+import { motion } from 'framer-motion';
 
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+export default function Portfolio() {
+  return (
+    <div className="w-screen h-screen overflow-x-scroll snap-x snap-mandatory flex bg-black text-white">
+      {/* Section 1: Intro */}
+      <section className="snap-center w-screen h-screen flex flex-col justify-center items-center px-10">
+        <motion.h1
+          className="text-6xl font-bold text-green-400"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Pulkit Shrimali
+        </motion.h1>
+        <p className="text-lg mt-4 text-gray-300 max-w-xl text-center">
+          Passionate software engineer with strong fundamentals in Machine Learning, Game Development, and Web Technologies. Currently pursuing BIT at University of Sydney.
+        </p>
+      </section>
 
-    h2 {
-      text-align: center;
-      color: #4CAF50;
-      font-size: 3.5em;
-      margin-top: 50px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-50px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    p, h3, ul {
-      opacity: 0;
-      animation: fadeInUp 1.5s forwards;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    h3 {
-      color: #4CAF50;
-      margin-top: 20px;
-      font-size: 1.5em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      transition: all 0.3s ease-in-out;
-      font-size: 1.2em;
-      list-style-type: disc;
-    }
-
-    li:hover {
-      color: #4CAF50;
-    }
-
-    a {
-      display: inline-block;
-      color: #4CAF50;
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #66ff99;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    section {
-      margin: 40px;
-    }
-
-    ::-webkit-scrollbar {
-      width: 12px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #333;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #4CAF50;
-      border-radius: 20px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #3e8e41;
-    }
-  </style>
-</head>
-<body>
-
-  <section id="resume">
-    <h2>PULKIT SHRIMALI</h2>
-    <p>📍 Pyrmont, NSW 2009 | 📞 0401 570 796 | 📧 pulkitshrimali05@gmail.com</p>
-
-    <h3>Professional Summary</h3>
-    <p>Highly motivated, well-mannered, and detail-oriented professional with a strong ability to manage multiple projects efficiently. A dedicated team player with excellent organizational skills, strong ethical values, and a positive attitude. Known for good behavior, professionalism, and a proactive approach to problem-solving. Capable of handling responsibilities with precision and reliability. Seeking a full-time role that allows me to leverage my technical expertise, problem-solving skills, and leadership abilities to drive success.</p>
-
-    <h3>Skills</h3>
-    <ul>
-      <li><strong>Technical & Programming Skills:</strong>
-        <ul>
-          <li>Web Development (HTML, CSS, JavaScript)</li>
-          <li>Game Development (Python, Java)</li>
-          <li>Data Structures & Algorithms (DSA)</li>
-          <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
-          <li>Planning and Coordination</li>
+      {/* Section 2: Skills */}
+      <section className="snap-center w-screen h-screen flex flex-col justify-center items-start px-20">
+        <h2 className="text-4xl font-semibold text-green-400 mb-4">Skills</h2>
+        <ul className="space-y-2 text-lg">
+          <li><strong className="text-white">Web Development:</strong> HTML, CSS, JavaScript</li>
+          <li><strong className="text-white">Game Development:</strong> Python, Java</li>
+          <li><strong className="text-white">Machine Learning:</strong> PyTorch, CNN, KNN</li>
+          <li><strong className="text-white">Tools:</strong> Git, Gradle, GitHub Pages</li>
+          <li><strong className="text-white">Soft Skills:</strong> Communication, Collaboration, Time Management</li>
         </ul>
-      </li>
-      <li><strong>Soft Skills:</strong>
-        <ul>
-          <li>Well-Mannered & Professional Conduct</li>
-          <li>Strong Work Ethic & Positive Attitude</li>
-          <li>Problem-Solving & Critical Thinking</li>
-          <li>Teamwork and Collaboration</li>
-          <li>Multitasking & Time Management</li>
-          <li>Strong Communication and Active Listening</li>
-          <li>Decision-Making & Leadership</li>
-          <li>Attention to Detail and Organization</li>
+      </section>
+
+      {/* Section 3: Projects */}
+      <section className="snap-center w-screen h-screen flex flex-col justify-center items-start px-20">
+        <h2 className="text-4xl font-semibold text-green-400 mb-4">Projects</h2>
+        <ul className="space-y-6 text-lg">
+          <li>
+            <h3 className="font-bold text-white">ImageDenoising-CNN</h3>
+            <p className="text-gray-400">CNN to denoise grayscale images with Gaussian & Speckle noise.</p>
+            <a className="text-green-400 underline" href="https://github.com/pulkitshrimali/ImageDenoising-CNN" target="_blank">View on GitHub</a>
+          </li>
+          <li>
+            <h3 className="font-bold text-white">Pneumonia Detection</h3>
+            <p className="text-gray-400">Machine Learning pipeline (KNN vs CNN) for chest X-ray classification.</p>
+            <a className="text-green-400 underline" href="https://github.com/pulkitshrimali/ML_XRay_Pneumonia_Detection" target="_blank">View on GitHub</a>
+          </li>
+          <li>
+            <h3 className="font-bold text-white">Java Pacman Game</h3>
+            <p className="text-gray-400">OOP design patterns: Strategy, State, Decorator for game logic.</p>
+            <a className="text-green-400 underline" href="https://github.com/pulkitshrimali/Java-Pacman-Game" target="_blank">View on GitHub</a>
+          </li>
+          <li>
+            <h3 className="font-bold text-white">Tower Defense Game</h3>
+            <p className="text-gray-400">Built with Processing & Gradle; includes BOMB power-up feature.</p>
+            <a className="text-green-400 underline" href="https://github.com/pulkitshrimali/TowerDefense-Game-Java" target="_blank">View on GitHub</a>
+          </li>
         </ul>
-      </li>
-    </ul>
+      </section>
 
-    <h3>Projects</h3>
-    <ul>
-      <li><strong>ImageDenoising-CNN – CNN-based Image Denoising</strong>
-        <ul>
-          <li>Developed a convolutional neural network (CNN) to denoise grayscale images with Gaussian and Speckle noise</li>
-          <li>Achieved PSNR of 31.15 dB on Gaussian noise and 33.03 dB on Speckle noise</li>
-          <li>Implemented in PyTorch with evaluation of model architecture and optimization strategies</li>
-          <li><a href="https://github.com/pulkitshrimali/ImageDenoising-CNN" target="_blank">🔗 View on GitHub</a></li>
-        </ul>
-      </li>
-
-      <li><strong>Pneumonia Detection using Machine Learning</strong>
-        <ul>
-          <li>Built a KNN vs CNN-based image classification pipeline for pneumonia detection from chest X-rays</li>
-          <li>Preprocessed medical image datasets and compared classifier accuracy and performance</li>
-          <li>Produced comprehensive report and results visualization</li>
-          <li><a href="https://github.com/pulkitshrimali/ML_XRay_Pneumonia_Detection" target="_blank">🔗 View on GitHub</a></li>
-        </ul>
-      </li>
-
-      <li><strong>Pacman Game with Design Patterns (Java)</strong>
-        <ul>
-          <li>Created an interactive Pacman game in Java using Gradle and OOP design patterns</li>
-          <li>Implemented Strategy, State, and Decorator patterns to manage ghost behavior and power-ups</li>
-          <li>Demonstrated object-oriented design and reusability of components</li>
-          <li><a href="https://github.com/pulkitshrimali/Java-Pacman-Game" target="_blank">🔗 View on GitHub</a></li>
-        </ul>
-      </li>
-
-      <li><strong>Tower Defense Game – INFO1113</strong>
-        <ul>
-          <li>Developed a tower defense game using Java, Gradle, and the Processing graphics library</li>
-          <li>Implemented custom enemy waves, tower upgrades, firing logic, and mana economy</li>
-          <li>Added an extension “BOMB” feature to eliminate enemies in range via key press or GUI</li>
-          <li><a href="https://github.com/pulkitshrimali/TowerDefense-Game-Java" target="_blank">🔗 View on GitHub</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <h3>Education</h3>
-    <p><strong>Bachelor of Information Technology – Computer Software & Media Applications</strong><br>
-    University of Sydney – Sydney, NSW</p>
-    <ul>
-      <li>Recipient of the International Sydney Student Reward</li>
-      <li>Continuing education in Engineering</li>
-    </ul>
-
-    <h3>Languages</h3>
-    <ul>
-      <li>English – Native/Bilingual Proficiency</li>
-      <li>Hindi – Native/Bilingual Proficiency</li>
-    </ul>
-  </section>
-
-</body>
-</html>
+      {/* Section 4: Contact */}
+      <section className="snap-center w-screen h-screen flex flex-col justify-center items-center px-10">
+        <h2 className="text-4xl font-semibold text-green-400 mb-4">Contact</h2>
+        <p className="text-gray-300 text-lg">📧 pulkitshrimali05@gmail.com</p>
+        <p className="text-gray-300 text-lg">📍 Pyrmont, NSW 2009</p>
+        <p className="text-gray-300 text-lg">📞 0401 570 796</p>
+      </section>
+    </div>
+  );
+}

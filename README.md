@@ -4,11 +4,6 @@
 
 > My personal portfolio website built with React, Tailwind CSS & Framer Motion.
 
-## 🔗 Live Demo
-
-[https://pulkitshrimali.github.io/Portfolio](https://pulkitshrimali.github.io/Portfolio)
-
----
 
 ## 🚀 Features
 
